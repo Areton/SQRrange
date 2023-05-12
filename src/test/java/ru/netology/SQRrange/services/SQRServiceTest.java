@@ -11,11 +11,7 @@ public class SQRServiceTest {
     @CsvFileSource(files = "src/test/resources/SQR.csv")
     public void testCountSQR(int expected, int min, int max) {
         SQRService service = new SQRService();
-
         int actual = service.calcSqr(min, max);
-
         Assertions.assertEquals(expected, actual);
-
-
     }
 }
